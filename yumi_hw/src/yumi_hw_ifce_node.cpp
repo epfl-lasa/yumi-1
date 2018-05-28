@@ -83,11 +83,11 @@ int main( int argc, char** argv )
   yumi_robot.create(name, urdf_string);
   yumi_robot.setup(hintToRemoteHost);
   
-  if(!yumi_robot.init())
+/*  if(!yumi_robot.init())
   {
     ROS_FATAL_NAMED("yumi_hw","Could not initialize robot real interface");
     return -1;
-  }
+  }*/
 
   // timer variables
   struct timespec ts = {0, 0};

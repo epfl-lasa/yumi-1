@@ -280,11 +280,12 @@ public:
     for (int j = 0; j < n_joints_; j++)
     {
       joint_position_prev_[j] = joint_position_[j];
-      joint_position_[j] = readJntPosition[j];
+   //   joint_position_[j] = readJntPosition[j];
+      joint_position_[j] = 0.0;
       //joint_effort_[j] = readJntEffort[j]; //TODO: read effort 
       joint_velocity_[j] = filters::exponentialSmoothing((joint_position_[j]-joint_position_prev_[j])/period.toSec(), joint_velocity_[j], 0.04); //exponential smoothing
       if(firstRunInPositionMode) {
-	  joint_position_command_[j] = readJntPosition[j];
+	  joint_position_command_[j] = 0.0;
       }
     }
     firstRunInPositionMode = false;
