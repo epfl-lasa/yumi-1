@@ -51,7 +51,7 @@
         <param name="port" value="$(arg port)"/>
         <param name="use_egm" value="$(arg egm)"/>
     </node>
-     
+    
     <!-- The grippers hardware interface -->
     <node required="true" name="yumi_gripper" pkg="yumi_hw" type="yumi_gripper_node" respawn="false" ns="/yumi" output="screen"> 
         <param name="ip" value="$(arg ip)"/>
@@ -64,7 +64,7 @@
     <node name="yumi_robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
     <!-- Show robot in Rviz   -->
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find yumi_description)/yumi.rviz"/>
+<!--     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find yumi_description)/yumi.rviz"/> -->
 
 </launch>
 

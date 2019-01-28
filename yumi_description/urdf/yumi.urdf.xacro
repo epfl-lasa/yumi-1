@@ -38,12 +38,12 @@
 
 
   <xacro:if value="${yumi_setup == 'default'}">
-    <xacro:property name="yumi_parent" value="world" />
-    <link name="world"/>
+    <xacro:property name="yumi_parent" value="world_real" />
+    <link name="world_real"/>
     <joint name="world_joint" type="fixed">
-      <parent link="world"/>
+      <parent link="world_real"/>
       <child link="yumi_base_link"/>
-      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <origin xyz="-0.065 0.00 -0.06" rpy="0 0 0" />
     </joint>
   </xacro:if>
 
